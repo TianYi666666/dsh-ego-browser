@@ -16,6 +16,7 @@
     "locale/*.json",
     "icon.svg",
     "docs",
+    "assets",
     "README.md",
     "README.zh.md",
     "LICENSE",
