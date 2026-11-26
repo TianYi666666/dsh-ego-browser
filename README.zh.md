@@ -14,6 +14,8 @@
 | `ego_browser_spaces` | 列出当前任务空间的 id、名称和归属，便于后续复用而不是重开。 |
 | `ego_browser_guide` | 打印与当前安装版本匹配的 CLI 用法指南 —— 写脚本时可调用哪些 TaskSpace / Page 方法，以它为准。 |
 
+![agent 调用 ego_browser_open 后，从你已登录的 ego lite 窗口里拿到标题、URL 与快照](docs/preview.png)
+
 ## 前置条件
 
 - **已安装并正在运行 ego lite**（[lite.ego.app](https://lite.ego.app/)）。插件通过 `ego-browser` CLI

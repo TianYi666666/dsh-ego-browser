@@ -14,6 +14,8 @@ happens in the profile you already use and stay signed in to.
 | `ego_browser_spaces` | Lists the existing task spaces with ids, names, and ownership, so a later run can reuse one. |
 | `ego_browser_guide` | Prints the CLI usage guide that matches the installed version — the authoritative list of TaskSpace and Page methods to call from a script. |
 
+![The agent calls ego_browser_open and receives the page title, URL and snapshot from the ego lite window you are already signed in to](docs/preview.png)
+
 ## Requirements
 
 - **ego lite installed and running** ([lite.ego.app](https://lite.ego.app/)). The plugin drives the real
