@@ -1,0 +1,4 @@
+# dsh-ego-browser bundle patch: mount the host plugin from the profile's node_modules.
+- insert:
+    - id: dsh-ego-browser
+      name: dsh-ego-browser

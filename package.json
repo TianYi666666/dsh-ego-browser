@@ -1,0 +1,61 @@
+{
+  "name": "dsh-ego-browser",
+  "version": "1.1.0",
+  "description": "Connect the DSH agent to the locally installed ego lite browser: run ego-browser scripts, open pages, and read page snapshots as model tools.",
+  "type": "module",
+  "main": "index.js",
+  "exports": {
+    ".": "./index.js",
+    "./package.json": "./package.json",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg",
+    "README.md",
+    "README.zh.md",
+    "LICENSE"
+  ],
+  "license": "MIT",
+  "author": "TianYi666666",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TianYi666666/dsh-ego-browser.git"
+  },
+  "homepage": "https://github.com/TianYi666666/dsh-ego-browser#readme",
+  "bugs": {
+    "url": "https://github.com/TianYi666666/dsh-ego-browser/issues"
+  },
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "ego-browser",
+    "ego-lite",
+    "browser",
+    "browser-automation"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "peerDependencies": {
+    "@deepseek-ai/dsh-tools": ">=0.0.1-rc.1 <0.1.0 || >=0.1.0-rc.1 <0.2.0-0 || >=0.2.0-rc.1 <0.3.0-0",
+    "@deepseek-ai/schemastery": "^3.18.1"
+  },
+  "peerDependenciesMeta": {
+    "@deepseek-ai/dsh-tools": {
+      "optional": true
+    },
+    "@deepseek-ai/schemastery": {
+      "optional": true
+    }
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  }
+}
