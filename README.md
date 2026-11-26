@@ -32,12 +32,16 @@ happens in the profile you already use and stay signed in to.
 ## Install
 
 ```sh
-dsh plugin --profile <profile> add dsh-ego-browser
+dsh plugin --profile <profile> add https://github.com/TianYi666666/dsh-ego-browser
 ```
 
 Or add this directory in **Plugins → Add plugin** from the desktop app. The bundle appears as
 **Ego browser bridge** in the plugin list and can be switched off like any other plugin; switching it off
 removes all four tools and touches no browser state.
+
+> **The install spec is the GitHub URL on purpose.** Bare `add dsh-ego-browser` resolves against npm, where
+> that name belongs to a different, unrelated project (`omdsh-dev/dsh-ego-browser`, GPL-3.0, 35 tools). This
+> plugin is not published to npm; use the repository URL so you get these four tools and not that one.
 
 ## Options
 

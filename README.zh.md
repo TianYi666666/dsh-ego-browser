@@ -29,11 +29,15 @@
 ## 安装
 
 ```sh
-dsh plugin --profile <profile> add dsh-ego-browser
+dsh plugin --profile <profile> add https://github.com/TianYi666666/dsh-ego-browser
 ```
 
 或在桌面客户端的 **插件 → 添加插件** 里选这个目录。插件在列表里显示为 **Ego 浏览器桥接**，
 可以像其他插件一样随时关闭；关闭后四个工具一起消失，不会对浏览器做任何改动。
+
+> **这里故意用 GitHub 地址安装。** 直接写 `add dsh-ego-browser` 会去 npm 取，而那个名字属于另一个
+> 无关项目（`omdsh-dev/dsh-ego-browser`，GPL-3.0，35 个工具）。本插件没有发布到 npm，请用仓库地址装，
+> 拿到的才是这四个工具，不是那个。
 
 ## 配置项
 
