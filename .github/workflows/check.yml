@@ -1,0 +1,60 @@
+name: check
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Syntax check
+        run: node --check index.js
+      - name: Manifests parse
+        run: |
+          node -e "for (const f of ['package.json','screenshots.json','locale/en.json','locale/zh.json']) JSON.parse(require('fs').readFileSync(f,'utf8')); console.log('ok')"
+      - name: Bundle manifest and patch agree
+        run: |
+          node -e "
+          const fs = require('node:fs');
+          const p = JSON.parse(fs.readFileSync('package.json', 'utf8'));
+          if (!p.dsh?.bundle?.patch) throw new Error('dsh.bundle.patch is missing');
+          if (!fs.existsSync(p.dsh.bundle.patch)) throw new Error('patch file not found: ' + p.dsh.bundle.patch);
+          if (!fs.existsSync(p.main)) throw new Error('main not found: ' + p.main);
+          const patch = fs.readFileSync(p.dsh.bundle.patch, 'utf8');
+          if (!patch.includes(p.name)) throw new Error('patch does not mount ' + p.name);
+          console.log('bundle ok');
+          "
+      - name: Locale paths resolve
+        run: |
+          node -e "
+          const fs = require('node:fs');
+          for (const loc of ['en', 'zh']) {
+            const meta = JSON.parse(fs.readFileSync('locale/' + loc + '.json', 'utf8')).meta;
+            if (!meta.title || !meta.description) throw new Error(loc + ': title/description missing');
+            if (meta.detail && !fs.existsSync(meta.detail)) throw new Error(loc + ': detail not found: ' + meta.detail);
+          }
+          console.log('locales ok');
+          "
+      - name: Declared assets exist and stay inside size limits
+        run: |
+          node -e "
+          const fs = require('node:fs');
+          const MAX_ICON = 256 * 1024;
+          const MAX_IMAGE = 5 * 1024 * 1024;
+          const p = JSON.parse(fs.readFileSync('package.json', 'utf8'));
+          for (const f of ['icon.svg', 'assets/icon-180.png']) {
+            const size = fs.statSync(f).size;
+            if (size > MAX_ICON) throw new Error(f + ' is ' + size + ' bytes');
+          }
+          for (const image of JSON.parse(fs.readFileSync('screenshots.json', 'utf8'))) {
+            if (!fs.existsSync(image)) throw new Error('screenshot missing: ' + image);
+            if (fs.statSync(image).size > MAX_IMAGE) throw new Error(image + ' is too large');
+          }
+          console.log('assets ok');
+          "

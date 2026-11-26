@@ -1,6 +1,7 @@
 {
   "meta": {
     "title": "Ego browser bridge",
-    "description": "Connects this agent to the ego lite browser installed on this computer. Adds four tools: ego_browser_run executes an ego-browser script in your real browser profile, ego_browser_open opens one URL and returns the title, visible text and accessibility snapshot, ego_browser_spaces lists the task spaces that exist, and ego_browser_guide prints the CLI usage guide for the installed version. The browser stays the one you use, so sites you are signed in to work without a new login. Turn the bundle off in Plugins to remove the tools; nothing is written to the browser while it is off. Reads the ego-browser path from the running ego lite version, PATH, or the cliPath option."
+    "description": "Connects this agent to the ego lite browser installed on this computer. Adds four tools: ego_browser_run executes an ego-browser script in your real browser profile, ego_browser_open opens one URL and returns the title, visible text and accessibility snapshot, ego_browser_spaces lists the task spaces that exist, and ego_browser_guide prints the CLI usage guide for the installed version. The browser stays the one you use, so sites you are signed in to work without a new login. Turn the bundle off in Plugins to remove the tools; nothing is written to the browser while it is off. Reads the ego-browser path from the running ego lite version, PATH, or the cliPath option.",
+    "detail": "docs/DETAIL.md"
   }
 }

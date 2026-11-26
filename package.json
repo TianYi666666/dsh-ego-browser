@@ -15,9 +15,11 @@
     "cordis.patch.yml",
     "locale/*.json",
     "icon.svg",
+    "docs",
     "README.md",
     "README.zh.md",
-    "LICENSE"
+    "LICENSE",
+    "screenshots.json"
   ],
   "license": "MIT",
   "author": "TianYi666666",

@@ -1,6 +1,7 @@
 {
   "meta": {
     "title": "Ego 浏览器桥接",
-    "description": "把这个 agent 接到你电脑上已安装的 ego lite 浏览器。新增四个工具：ego_browser_run 在你的真实浏览器配置里执行 ego-browser 脚本；ego_browser_open 打开一个网址并返回标题、可见正文和无障碍快照；ego_browser_spaces 列出当前存在的任务空间；ego_browser_guide 打印与已安装版本匹配的 CLI 用法指南。用的就是你平时那个浏览器，已登录的网站无需重新登录。在「插件」里关掉本插件即移除这些工具，关闭期间不会对浏览器做任何写入。程序会自动识别正在运行的 ego lite 版本对应的可执行文件，也会读 PATH 和 cliPath 选项。"
+    "description": "把这个 agent 接到你电脑上已安装的 ego lite 浏览器。新增四个工具：ego_browser_run 在你的真实浏览器配置里执行 ego-browser 脚本；ego_browser_open 打开一个网址并返回标题、可见正文和无障碍快照；ego_browser_spaces 列出当前存在的任务空间；ego_browser_guide 打印与已安装版本匹配的 CLI 用法指南。用的就是你平时那个浏览器，已登录的网站无需重新登录。在「插件」里关掉本插件即移除这些工具，关闭期间不会对浏览器做任何写入。程序会自动识别正在运行的 ego lite 版本对应的可执行文件，也会读 PATH 和 cliPath 选项。",
+    "detail": "docs/DETAIL.zh.md"
   }
 }

@@ -1,0 +1,47 @@
+<svg width="640" height="300" viewBox="0 0 640 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="640" height="300" rx="16" fill="#FFFFFF"/>
+  <rect x="0.5" y="0.5" width="639" height="299" rx="15.5" stroke="#E3E8F0"/>
+
+  <!-- Left: the agent asks for a tool and receives structured fields -->
+  <rect x="28" y="28" width="252" height="204" rx="12" fill="#F7F9FC" stroke="#E3E8F0"/>
+  <text x="44" y="52" font-family="Segoe UI, system-ui, sans-serif" font-size="11" font-weight="600" fill="#5A6478" letter-spacing="0.6">AGENT</text>
+
+  <rect x="44" y="64" width="220" height="30" rx="8" fill="#FFFFFF" stroke="#DCE3EE"/>
+  <text x="56" y="83" font-family="Segoe UI, system-ui, sans-serif" font-size="11" fill="#33405A">open my orders page and read</text>
+
+  <rect x="44" y="102" width="220" height="30" rx="8" fill="#EEF4FF" stroke="#C9DAFF"/>
+  <text x="56" y="121" font-family="Consolas, monospace" font-size="11" fill="#2B5FD9">ego_browser_open</text>
+
+  <rect x="44" y="140" width="220" height="76" rx="8" fill="#FFFFFF" stroke="#DCE3EE"/>
+  <text x="56" y="158" font-family="Consolas, monospace" font-size="10" fill="#6B7689">title      Orders — Acme</text>
+  <text x="56" y="176" font-family="Consolas, monospace" font-size="10" fill="#6B7689">url        /orders</text>
+  <text x="56" y="194" font-family="Consolas, monospace" font-size="10" fill="#6B7689">space   3   snapshot 1 482 chars</text>
+
+  <!-- Arrow -->
+  <path d="M292 130H344" stroke="#B9C6DC" stroke-width="2" stroke-linecap="round"/>
+  <path d="M337 123L345 130L337 137" stroke="#B9C6DC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Right: the real ego lite window -->
+  <rect x="356" y="28" width="256" height="204" rx="12" fill="#FFFFFF" stroke="#E3E8F0"/>
+  <path d="M356 40a12 12 0 0 1 12-12h232a12 12 0 0 1 12 12v18H356z" fill="#F7F9FC"/>
+  <line x1="356" y1="58" x2="612" y2="58" stroke="#E3E8F0"/>
+  <circle cx="374" cy="43" r="3.5" fill="#4C8DFF"/>
+  <circle cx="386" cy="43" r="3.5" fill="#B9C6DC"/>
+  <circle cx="398" cy="43" r="3.5" fill="#B9C6DC"/>
+
+  <rect x="372" y="72" width="224" height="146" rx="8" fill="#FBFCFE" stroke="#E8EEF7"/>
+  <rect x="386" y="86" width="96" height="9" rx="4.5" fill="#D8E1EF"/>
+  <rect x="386" y="104" width="196" height="24" rx="6" fill="#FFFFFF" stroke="#E3E8F0"/>
+  <rect x="396" y="113" width="120" height="6" rx="3" fill="#D8E1EF"/>
+  <rect x="386" y="136" width="196" height="24" rx="6" fill="#FFFFFF" stroke="#E3E8F0"/>
+  <rect x="396" y="145" width="88" height="6" rx="3" fill="#D8E1EF"/>
+  <rect x="386" y="168" width="196" height="24" rx="6" fill="#F3F7FF" stroke="#C9DAFF"/>
+  <rect x="396" y="177" width="104" height="6" rx="3" fill="#9DBBF5"/>
+
+  <!-- Signed-in badge sits under both panels, never over the content -->
+  <rect x="440" y="248" width="172" height="24" rx="12" fill="#E9F7EE" stroke="#BCE3C9"/>
+  <circle cx="456" cy="260" r="4" fill="#2FA45C"/>
+  <text x="468" y="264" font-family="Segoe UI, system-ui, sans-serif" font-size="10.5" fill="#22713F">runs in your signed-in profile</text>
+
+  <text x="28" y="292" font-family="Segoe UI, system-ui, sans-serif" font-size="10" fill="#8A94A6">One task space per goal; the tab stays yours to keep or close.</text>
+</svg>
